@@ -1,5 +1,5 @@
 # IoV-SFDL: Swarm-Federated-Deep-Learning Framework
-LSTM network to verify trajector prediction on the NGSIM dataset based on IoV-SFDL framework
+LSTM network to verify trajector prediction on the NGSIM dataset based on IoV-SFDL framework. The work is based on our paper:xxxxxxxxxxxx
 
 This work is based on the Swarm Learning Framework to achieve efficient and privacy protected vehicle trajectory prediction task in the IoV system.
 
