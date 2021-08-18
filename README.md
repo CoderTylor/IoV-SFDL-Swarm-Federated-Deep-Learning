@@ -3,7 +3,10 @@ LSTM network to verify trajector prediction on the NGSIM dataset based on IoV-SF
 
 This work is based on the Swarm Learning Framework to achieve efficient and privacy protected vehicle trajectory prediction task in the IoV system.
 
-First, please fellow the Swarm Learning @ https://github.com/HewlettPackard/swarm-learning to download and setup docker images and evaluation licenses.
+![微信截图_20210818101303](https://user-images.githubusercontent.com/55383755/129825713-41d69ecf-5813-4c6e-95bb-a55405ef2e9a.png)
+
+
+<!-- First, please fellow the Swarm Learning @ https://github.com/HewlettPackard/swarm-learning to download and setup docker images and evaluation licenses.
 
 Step 1, please open a terminal, change directory to ./SL-IoV/SL_file/
 
@@ -100,7 +103,7 @@ bash ./swarm-learning/bin/run-sl        \
     --apls-ip 172.7.7.7                 \
     -serverAddress 172.8.8.8            \
     -genJoinToken
-
+ -->
 
 Then, change the directory to ./SL-IoV/FL_file/ with commond
 
