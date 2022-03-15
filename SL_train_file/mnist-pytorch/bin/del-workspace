@@ -24,8 +24,7 @@ examples_dir=$(realpath "${script_dir}/../..")
 source "${swarm_bin_dir}/common"
 
 # Prefix for workspace directory
-WS_DIR_PREFIX="wx-"
-
+WS_DIR_PREFIX="ws-"
 
 # Help function
 help()
@@ -63,7 +62,7 @@ fi
 
 # Finalize and assign values
 parent_dir=${parent_dir%/}
-network_name="$example-net-2"
+network_name="$example-net"
 ws_dir="$parent_dir/$WS_DIR_PREFIX$example"
 
 echo "Parameters -"

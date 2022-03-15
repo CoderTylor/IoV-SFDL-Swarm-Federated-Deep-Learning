@@ -27,8 +27,8 @@ def FL():
     dataDir = os.getenv('DATA_DIR', './data')
     test_dataset = loadData(dataDir)
     testLoader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffle=True)
-    read_dir_1 = "/home/tylor/Desktop/sl/swarm-learning/examples/wx-mnist-pytorch/node10/model/"
-    read_dir_2 = "/home/tylor/Desktop/sl/swarm-learning/examples/wx-mnist-pytorch/node1/model/"
+    read_dir_1 = "./ws-mnist-pytorch/node1/model/"
+    read_dir_2 = "./ws-mnist-pytorch/node2/model/"
     save_dir = "C:/Users/18810/Desktop/FL/net_global.pkl"
     count=0
     weights=[1,1]
