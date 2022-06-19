@@ -1,9 +1,4 @@
-## Swarm Learning Examples
-
-Several examples of using Swarm Learning are provided with the package. 
-
-## Prerequisite for all examples
-Start license server and install valid license before running any of the examples. Refer [Installing licenses and starting license server](../docs/setup.md#installing-licenses-and-starting-license-server).
+## Swarm Federated Learning
 
 ## Quick start examples:
 These quick start examples are designed to run in a single machine and complete in limited time. These examples are aimed for the user who wants to download Swarm Learning images, quickly setup and run to get a feel of it. The steps and scripts for quick start examples are written to run one Swarm Network node and two Swarm Learning nodes on a single machine to simulate decentralized environment. The quick start examples are:  
