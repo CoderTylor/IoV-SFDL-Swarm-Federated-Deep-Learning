@@ -1,21 +1,5 @@
 ## Swarm Federated Learning
 
-## Quick start examples:
-These quick start examples are designed to run in a single machine and complete in limited time. These examples are aimed for the user who wants to download Swarm Learning images, quickly setup and run to get a feel of it. The steps and scripts for quick start examples are written to run one Swarm Network node and two Swarm Learning nodes on a single machine to simulate decentralized environment. The quick start examples are:  
-   1. mnist-keras: It runs decentralized training on MNIST dataset for digit classification using TensorFlow based Swarm Learning framework.
-   2. mnist-pytorch: It runs decentralized training on MNIST dataset for digit classification using PyTorch based Swarm Learning framework.
-   3. fraud-detection-keras: It runs decentralized training on structured Credit Card Fraud dataset for fraud detection using TensorFlow based Swarm Learning framework.
-            
-## Multi-node examples:
-These examples are designed to run in about 8 to 10 machines and demonstrate the use of multiple configurations of the Swarm Learning framework.
-
-   1. mnist: It runs decentralized training on MNIST dataset for digit classification using TensorFlow and PyTorch.    
-   2. CIFAR-10: It runs decentralized training on CIFAR-10 dataset for image classification using TensorFlow.    
-   3. fraud-detection: It runs decentralized training on structured Credit Card Fraud dataset for credit card fraud 
-       detection using TensorFlow.
-
-See the README file for each example for brief instructions on running them. For a more detailed reference on the Swarm Learning platform and package, see [Readme](../README.md)
-
 ## System setup for the multi-node examples
 1. The instructions in these examples assume that Swarm Learning will run on 8 to 10 systems.
     - These 10 systems have IP addresses 172.1.1.1, 172.2.2.2, 172.3.3.3, 172.4.4.4, 172.5.5.5, 172.6.6.6, 172.7.7.7, 172.8.8.8, 172.9.9.9 and 172.10.10.10.
