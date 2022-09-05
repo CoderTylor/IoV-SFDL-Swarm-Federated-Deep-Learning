@@ -150,4 +150,4 @@ python federated.py
 - [Papers](https://arxiv.org/pdf/2108.03981.pdf)
 - [Videos]()
 
-![image](./Fig/Trim.gif)
+![image]([./Fig/Trim.gif](https://github.com/CoderTylor/IoV-SFDL-Swarm-Federated-Deep-Learning/blob/main/Fig/Trim.gif))
