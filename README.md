@@ -150,5 +150,5 @@ python federated.py
 - [Papers](https://arxiv.org/pdf/2108.03981.pdf)
 - [Videos]()
 
-<iframe height=498 width=510 src="Trim.mp4">
+<iframe height=498 width=510 src="Trim.gif">
 
