@@ -24,7 +24,7 @@ examples_dir=$(realpath "${script_dir}/../..")
 source "${swarm_bin_dir}/common"
 
 # Prefix for workspace directory
-WS_DIR_PREFIX="ws2-"
+WS_DIR_PREFIX="ws-"
 
 # Help function
 help()
@@ -61,13 +61,13 @@ then
    echo "Example $example is not part of quick start."
    help
 fi
-[ -z "$nodes" ] && nodes=5
+[ -z "$nodes" ] && nodes=3
 [ -z "$parent_dir" ] && parent_dir="."
 [ -z "$apls_ip" ] && apls_ip=`hostname -I | awk '{print $1}'`
 
 # Finalize names
 parent_dir=${parent_dir%/}
-network_name="$example-net-2s"
+network_name="$example-net"
 ws_dir="$parent_dir/$WS_DIR_PREFIX$example"
 
 # Print
@@ -89,7 +89,7 @@ for index in $(seq 1 $nodes); do
 done
 echo "Data and model files are generated for each node inside the workspace $ws_dir."
 
- Create network bridge
+# Create network bridge
 echo "Creating docker network bridge $network_name."
 ${sudo} docker network create -d bridge $network_name
 ret_val=${?}
@@ -97,7 +97,7 @@ ret_val=${?}
 
 # Start spire server
 echo "Starting spire server"
-# $swarm_bin_dir/run-spire-server -d --name node-spire_1 --network $network_name
+$swarm_bin_dir/run-spire-server -d --name node-spire --network $network_name
 ret_val=${?}
 [ $ret_val -ne 0 ] && echo "Spire server failed to start." && exit 1
 
@@ -107,7 +107,7 @@ sleep 5
 
 # Start Swarm Network node
 echo "Starting Swarm Network node"
-$swarm_bin_dir/run-sn -d --name node-sx --network $network_name --host-ip node-sx --sentinel-ip node-sx --apls-ip $apls_ip -serverAddress node-spire_1 -genJoinToken
+$swarm_bin_dir/run-sn -d --name node-sn --network $network_name --host-ip node-sn --sentinel-ip node-sn --apls-ip $apls_ip -serverAddress node-spire -genJoinToken
 ret_val=${?}
 [ $ret_val -ne 0 ] && echo "Swarm Network node failed to start." && exit 1
 
