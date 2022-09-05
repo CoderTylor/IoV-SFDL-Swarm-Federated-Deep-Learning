@@ -152,7 +152,7 @@ python federated.py
 
 <div>			<!--块级封装-->
     <center>	<!--将图片和文字居中-->
-    <img src="./Trim.gif"
+    <img src="./Fig/Trim.gif"
          alt="Fig not Found"
          style="zoom:80%"/>
     <br>		<!--换行-->
