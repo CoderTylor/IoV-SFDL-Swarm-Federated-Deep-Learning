@@ -150,5 +150,13 @@ python federated.py
 - [Papers](https://arxiv.org/pdf/2108.03981.pdf)
 - [Videos]()
 
-<iframe height=498 width=510 src="Trim.gif">
+<div>			<!--块级封装-->
+    <center>	<!--将图片和文字居中-->
+    <img src="./Trim.gif"
+         alt="Fig not Found"
+         style="zoom:80%"/>
+    <br>		<!--换行-->
+  IoV SFDL Framework.	<!--标题-->
+    </center>
+</div>
 
