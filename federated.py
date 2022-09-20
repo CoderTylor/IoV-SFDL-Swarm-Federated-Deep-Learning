@@ -8,6 +8,7 @@ import os
 import csv
 from utils import myError, lrDecline, optimizerChoose, lossCaculate
 import time
+<<<<<<< HEAD
 import math
 conf=train_conf()
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -106,6 +107,11 @@ def GFDL_runnot_flag_change2True():
 
 def FL():
     # Initialize Models
+=======
+conf=train_conf()
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+def FL():
+>>>>>>> c570179daa53c7cd2cafe6e9b4d95446932832f4
     model_1=VPTLSTM(rnn_size=conf.rnn_size, embedding_size=conf.embedding_size, input_size=conf.input_size,
                           output_size=conf.output_size,
                           grids_width=conf.grids_width, grids_height=conf.grids_height, dropout_par=conf.dropout_par,
@@ -119,7 +125,10 @@ def FL():
                       grids_width=conf.grids_width, grids_height=conf.grids_height, dropout_par=conf.dropout_par,
                       device=device).to(device)
     # read_dir.append()
+<<<<<<< HEAD
     # Parameters
+=======
+>>>>>>> c570179daa53c7cd2cafe6e9b4d95446932832f4
     dataDir = os.getenv('DATA_DIR', './data')
     test_dataset = loadData(dataDir)
     testLoader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffle=True)
@@ -133,6 +142,7 @@ def FL():
     save_dir_node21 = "./ws2-mnist-pytorch/node1/model/"
     save_dir_node22 = "./ws2-mnist-pytorch/node2/model/"
     save_dir_node23 = "./ws2-mnist-pytorch/node2/model/"
+<<<<<<< HEAD
     count=0
     Effectweights=[1,1]
     Rubostweights=[math.log(3),math.log(3)]
@@ -265,6 +275,72 @@ def FL():
             #     f.write("True")  # 自带文件关闭功能，不需要再写f.close()
 
             # print("Save csv loss")
+=======
+
+
+    count=0
+    weights=[1,1]
+    time.sleep(15)
+    while True:
+
+        with open(read_dir_1+"read_model.txt", "r") as f:
+            model_1_flag = f.readline()
+        with open(read_dir_2+"read_model.txt", "r") as f:
+            model_2_flag = f.readline()
+        if model_2_flag=="False" and model_1_flag=="False" :
+            model_1.load_state_dict(torch.load(read_dir_1+"net.pkl"))
+            model_2.load_state_dict(torch.load(read_dir_2+"net.pkl"))
+            distance_error_1, loss_1, acc_1=test(model_1, device, testLoader, test_dataset, conf)
+            distance_error_2, loss_2, acc_2=test(model_2, device, testLoader, test_dataset, conf)
+            if float(loss_1)<float(loss_2):
+                weights[0] += 1
+            else:
+                weights[1] += 1
+            w_local = []
+            w_local.append(copy.deepcopy(model_1.state_dict()))
+            w_local.append(copy.deepcopy(model_2.state_dict()))
+            # w_local.append(copy.deepcopy(model_2.state_dict()))
+            w_global = get_weights(w_local, [weights[0]/(weights[0]+weights[1]), weights[1]/(weights[0]*0.5+weights[1]*0.5)])
+            # w_global = get_weights(w_local, [0.5,0.5])
+
+            model_global.load_state_dict(w_global)
+            distance_error, loss, acc=test(model_global, device, testLoader, test_dataset, conf)
+            f = open('global_acc.csv', 'a', encoding='utf-8')
+            csv_writer = csv.writer(f)
+            csv_writer.writerow([str(distance_error), str(loss),str(acc)])
+            f.close()
+            # torch.save(model_global.state_dict(), read_dir_1+"net.pkl")
+            # torch.save(model_global.state_dict(), read_dir_2+"net.pkl")
+            torch.save(model_global.state_dict(), save_dir_node11+"net.pkl")
+            torch.save(model_global.state_dict(), save_dir_node12+"net.pkl")
+            torch.save(model_global.state_dict(), save_dir_node13+"net.pkl")
+            torch.save(model_global.state_dict(), save_dir_node21+"net.pkl")
+            torch.save(model_global.state_dict(), save_dir_node22+"net.pkl")
+            torch.save(model_global.state_dict(), save_dir_node23+"net.pkl")
+            count += 1
+            # with open(read_dir_1 + "read_model.txt", "w") as f:
+            #     model_1_flag = f.readline()
+
+            with open(save_dir_node11 + "read_model.txt", "w") as f:
+                f.write("True")  # 自带文件关闭功能，不需要再写f.close()
+
+            with open(save_dir_node12 + "read_model.txt", "w") as f:
+                f.write("True")  # 自带文件关闭功能，不需要再写f.close()
+
+            with open(save_dir_node13 + "read_model.txt", "w") as f:
+                f.write("True")  # 自带文件关闭功能，不需要再写f.close()
+
+            with open(save_dir_node21 + "read_model.txt", "w") as f:
+                f.write("True")  # 自带文件关闭功能，不需要再写f.close()
+
+            with open(save_dir_node22 + "read_model.txt", "w") as f:
+                f.write("True")  # 自带文件关闭功能，不需要再写f.close()
+
+            with open(save_dir_node23 + "read_model.txt", "w") as f:
+                f.write("True")  # 自带文件关闭功能，不需要再写f.close()
+
+
+>>>>>>> c570179daa53c7cd2cafe6e9b4d95446932832f4
             # with open(read_dir_1 + "read_model.txt", "w") as f:
             #     f.write("True")  # 自带文件关闭功能，不需要再写f.close()
             #
@@ -272,6 +348,10 @@ def FL():
             #     f.write("True")  # 自带文件关闭功能，不需要再写f.close()
             # with open(read_dir_2 + "read_model.txt", "w") as f:
             #     model_2_flag = f.readline()
+<<<<<<< HEAD
+=======
+        time.sleep(8)
+>>>>>>> c570179daa53c7cd2cafe6e9b4d95446932832f4
 
     # torch.save(model_global, save_dir)
 

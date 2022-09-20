@@ -14,5 +14,10 @@ echo "run circle_2 node 2"
 gnome-terminal -e 'bash -c "sh node_23.sh;exec bash"'
 echo "run circle_2 node 3"
 
+<<<<<<< HEAD
 # echo "Start Global Federated Learning Framework"
 # gnome-terminal -e 'bash -c "sh federated.sh;exec bash"'
+=======
+echo "Start Global Federated Learning Framework"
+gnome-terminal -e 'bash -c "sh federated.sh;exec bash"'
+>>>>>>> c570179daa53c7cd2cafe6e9b4d95446932832f4
