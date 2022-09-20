@@ -167,18 +167,10 @@ python federated.py
 The dataset used in the experiment is the Next Generation Simulation (NGSIM) Vehicle Trajectories and Supporting Data, which can be downloaded from the [URL](https://www.fhwa.dot.gov/publications/research/operations/06137/index.cfm) and saved and generated in the following [format](https://github.com/CoderTylor/IoV-SFDL-Swarm-Federated-Deep-Learning/blob/main/data/test.csv)
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c570179daa53c7cd2cafe6e9b4d95446932832f4
 ## References
 
 - [Papers](https://arxiv.org/pdf/2108.03981.pdf)
 - [Videos]()
 
 ![image](https://github.com/CoderTylor/IoV-SFDL-Swarm-Federated-Deep-Learning/blob/main/Fig/Trim.gif)
-<<<<<<< HEAD
-
-
-=======
->>>>>>> c570179daa53c7cd2cafe6e9b4d95446932832f4
