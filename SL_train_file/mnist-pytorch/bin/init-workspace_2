@@ -107,7 +107,7 @@ sleep 5
 
 # Start Swarm Network node
 echo "Starting Swarm Network node"
-$swarm_bin_dir/run-sn -d --name node-sn --network $network_name --host-ip node-sn --sentinel-ip node-sn --apls-ip $apls_ip -serverAddress node-spire_1 -genJoinToken
+$swarm_bin_dir/run-sn -d --name node-sx --network $network_name --host-ip node-sx --sentinel-ip node-sx --apls-ip $apls_ip -serverAddress node-spire_1 -genJoinToken
 ret_val=${?}
 [ $ret_val -ne 0 ] && echo "Swarm Network node failed to start." && exit 1
 
