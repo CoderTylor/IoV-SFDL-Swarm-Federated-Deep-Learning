@@ -1,0 +1,62 @@
+****************************************
+载入数据中
+./data/train.csv文件加载完成，共计49组数据
+./data/test.csv文件加载完成，共计49组数据
+数据载入完成
+2022-09-20 22:23:18,800 : swarm.mlCnt : INFO : Setting up ml layer for the swarm node: START
+2022-09-20 22:23:18,801 : swarm.mlCnt : INFO : ML is running on a normal fullnode!
+2022-09-20 22:23:18,885 : swarm.mlCnt : INFO : Instantiating file services for ml node 172.18.0.8
+SMLFS: Loading State File : /platform/swarmml/SMLNODE/smlfs_state_latest.json
+localIp for fs service = 172.18.0.8
+2022-09-20 22:23:18,892 : swarm.mlCnt : INFO : Successfully completed the initialization of ML container ...
+2022-09-20 22:23:18,912 : swarm.mlCnt : INFO : ***Swarm Callback Params***
+2022-09-20 22:23:18,912 : swarm.mlCnt : INFO : sync_interval: 128
+2022-09-20 22:23:18,912 : swarm.mlCnt : INFO : min_peers: 3
+2022-09-20 22:23:18,912 : swarm.mlCnt : INFO : max_peers: 0
+2022-09-20 22:23:18,912 : swarm.mlCnt : INFO : val_batch_size: 128
+2022-09-20 22:23:18,912 : swarm.mlCnt : INFO : ***************************
+2022-09-20 22:23:18,912 : swarm.mlCnt : INFO : Creating object for context: defaultbb.cqdb.sml.hpe
+2022-09-20 22:23:20,963 : swarm.smlCBB : INFO : ***Swarm Network Configuration***
+2022-09-20 22:23:20,963 : swarm.smlCBB : INFO : Context:defaultbb.cqdb.sml.hpe
+2022-09-20 22:23:20,964 : swarm.smlCBB : INFO :     syncInterval      : 128
+2022-09-20 22:23:20,964 : swarm.smlCBB : INFO :     min_peers         : 3
+2022-09-20 22:23:20,964 : swarm.smlCBB : INFO :     blackboard_set_by : 172.18.0.6
+2022-09-20 22:23:20,964 : swarm.smlCBB : INFO :     adaptive_sync     : False
+2022-09-20 22:23:20,964 : swarm.smlCBB : INFO : ***************************
+2022-09-20 22:23:20,986 : swarm.mlCnt : INFO : Merging ...
+读取的值 False
+读取的值 False
+Fist epoch do not load
+/opt/conda/lib/python3.7/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='none' instead.
+  warnings.warn(warning.format(ret))
+Train Epoch: 1 [0/49 (0%)]	Loss: 12.221164
+epoch=1, 模型已刷新存储至net_1.pkl
+读取的值 True
+读取的值 False
+Global model have better performance
+Train Epoch: 2 [0/49 (0%)]	Loss: 10.841861
+epoch=2, 模型已刷新存储至net_1.pkl
+读取的值 True
+读取的值 False
+Local model better, do not load
+Train Epoch: 3 [0/49 (0%)]	Loss: 6.303249
+epoch=3, 模型已刷新存储至net_1.pkl
+读取的值 True
+读取的值 False
+Local model better, do not load
+Train Epoch: 4 [0/49 (0%)]	Loss: 2.317697
+epoch=4, 模型已刷新存储至net_1.pkl
+读取的值 True
+读取的值 False
+Global model have better performance
+Train Epoch: 5 [0/49 (0%)]	Loss: 1.626448
+epoch=5, 模型已刷新存储至net_1.pkl
+读取的值 True
+读取的值 False
+Global model have better performance
+Train Epoch: 6 [0/49 (0%)]	Loss: 1.340664
+epoch=6, 模型已刷新存储至net_1.pkl
+读取的值 True
+读取的值 False
+Local model better, do not load
+Train Epoch: 7 [0/49 (0%)]	Loss: 1.403374
