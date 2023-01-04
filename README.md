@@ -23,11 +23,12 @@ This Project proposes a Swarm-Federated Deep Learning framework in the IoV syste
 ## Please cite our paper if the source code can help you.
 
 ```
-@article{wang2021credibility,
-  title={A Credibility-aware Swarm-Federated Deep Learning Framework in Internet of Vehicles},
+@article{wang2023credibility,
+  title={A credibility-aware swarm-federated deep learning framework in internet of vehicles},
   author={Wang, Zhe and Li, Xinhang and Wu, Tianhao and Xu, Chen and Zhang, Lin},
-  journal={arXiv preprint arXiv:2108.03981},
-  year={2021}
+  journal={Digital Communications and Networks},
+  year={2023},
+  publisher={Elsevier}
 }
 ```
 
